@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+}
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+a {
+    background-color: #fbc2eb;
+    border-radius: 30%;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.gradiante {
+
+    background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+
+}
+footer{
+    width: 100vw;
+    height: 15vh;
+    position: fixed;
+    bottom: 1vh;
+    text-align: right;
+}
+iframe{
+    width: 80vw;
+    height: 80vh;
+    position: sticky;
+    box-shadow: #444 2px 2px 2px;
+}
