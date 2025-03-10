@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Formulario</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .resultado {
+            background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: #444 2px 2px 5px;
+            text-align: left;
+            width: 50%;
+        }
+        a {
+            background-color: #fbc2eb;
+            border-radius: 30%;
+            padding: 10px;
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        footer{
+            width: 100vw;
+            height: 15vh;
+            position: fixed;
+            bottom: 1vh;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado del Formulario</h1>
+    <div class="resultado">
+        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p><strong>Apellidos:</strong> <span id="apellidos"></span></p>
+        <p><strong>Correo electrónico:</strong> <span id="correo"></span></p>
+        <p><strong>Género:</strong> <span id="genero"></span></p>
+        <p><strong>Hobbies:</strong> <span id="hobbies"></span></p>
+        <p><strong>Objeto favorito:</strong> <span id="objeto"></span></p>
+        <a href="formulario.html">Volver al formulario</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("nombre").textContent = params.get("nombre") || "No especificado";
+        document.getElementById("apellidos").textContent = params.get("apellidos") || "No especificado";
+        document.getElementById("correo").textContent = params.get("correo") || "No especificado";
+        document.getElementById("genero").textContent = params.get("genero") || "No especificado";
+        
+        let hobbies = params.getAll("hobbie").join(", ") || "No especificado";
+        document.getElementById("hobbies").textContent = hobbies;
+        
+        document.getElementById("objeto").textContent = params.get("objetos") || "No especificado";
+    </script>
+</body>
+</html>

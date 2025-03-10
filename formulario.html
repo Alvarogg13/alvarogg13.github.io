@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        fieldset {
+            border-color: #a6c1ee;
+            background-color: rgba(246, 194, 235, 0.3);
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        legend {
+            font-family: fantasy;
+            color: #444;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, button {
+            background-color: #fbc2eb;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #a6c1ee;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #8aaee0;
+        }
+        .gradiante {
+            background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+        }
+        footer {
+            width: 100vw;
+            height: 15vh;
+            position: fixed;
+            bottom: 1vh;
+            text-align: right;
+        }
+        iframe {
+            width: 80vw;
+            height: 80vh;
+            position: sticky;
+            box-shadow: #444 2px 2px 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="resultado.html" method="GET">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label>Género:</label>
+            <input type="radio" name="genero" value="Femenino"> Femenino
+            <input type="radio" name="genero" value="Masculino"> Masculino
+            <input type="radio" name="genero" value="Otro"> Otro
+        </fieldset>
+        
+        <fieldset>
+            <legend>Otros datos</legend>
+            <label>Hobbies:</label>
+            <input type="checkbox" name="hobbie" value="Videojuegos"> Videojuegos
+            <input type="checkbox" name="hobbie" value="Música"> Música
+            <input type="checkbox" name="hobbie" value="Cine"> Cine
+            
+            <label for="objetos">Objeto favorito:</label>
+            <select id="objetos" name="objetos">
+                <option value="móvil">Móvil</option>
+                <option value="ordenador">Ordenador</option>
+                <option value="consola">Consola</option>
+                <option value="libro">Libro</option>
+            </select>
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
